@@ -12,12 +12,14 @@ from allure_commons.types import AttachmentType
 def setUp(request):
     site_name = 'http://localhost:4200/'
     path_to_chromedriver = 'Driver/chromedriver'
+    window_height = 1920
+    window_weight = 1080
 
     driver = webdriver.Chrome(path_to_chromedriver)
     request.cls.driver = driver
     print('Chromedriver is set up at: ' + str(datetime.datetime.now()))
     driver.get(site_name)
-    driver.maximize_window()
+    driver.set_window_size(window_weight, window_height)
     driver.implicitly_wait(10)
     driver.set_page_load_timeout(15)
     yield
