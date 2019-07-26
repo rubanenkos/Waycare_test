@@ -9,7 +9,7 @@ class TestSearch(TestBase):
 
     @allure.story(u'#1 - City name verification')
     def test_city_name(self):
-        #Expected conditions
+        # Expected conditions
         expected_city_name = "Las Vegas"
 
         home_page = HomePage(self.driver)
