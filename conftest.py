@@ -13,8 +13,8 @@ def setUp(request):
     # TODO Move out to configuration file
     site_name = 'http://localhost:4200/'
     path_to_chromedriver = 'Driver/chromedriver'
-    window_height = 1920
-    window_weight = 1080
+    window_height = 1080
+    window_weight = 1920
 
     driver = webdriver.Chrome(path_to_chromedriver)
     request.cls.driver = driver
