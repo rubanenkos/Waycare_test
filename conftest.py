@@ -10,6 +10,7 @@ from allure_commons.types import AttachmentType
 @allure.step(u'Setup environment')
 @pytest.fixture()
 def setUp(request):
+    # TODO Move out to configuration file
     site_name = 'http://localhost:4200/'
     path_to_chromedriver = 'Driver/chromedriver'
     window_height = 1920
